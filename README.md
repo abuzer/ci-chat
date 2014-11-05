@@ -6,7 +6,7 @@ http://anantgarg.com/2009/05/13/gmail-facebook-style-jquery-chat/ i have convert
 
 
 You must first create a mySQL table as below.
-
+```
 CREATE TABLE IF NOT EXISTS `chat` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `from` varchar(255) NOT NULL DEFAULT '',
@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS `chat` (
   `to_name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+```
 
 
 
