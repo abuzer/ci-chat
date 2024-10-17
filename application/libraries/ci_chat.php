@@ -2,36 +2,7 @@
 
 class ci_chat{
 
-	public function __construct()
-    {
-        $this->ci =& get_instance();
-        $this->ci->load->database();
-        //$this->ci->load->model('chat_model');
-        if (!isset($_SESSION['chatHistory'])) {
-			$_SESSION['chatHistory'] = array();	
-		}
-		if (!isset($_SESSION['openChatBoxes'])) {
-			$_SESSION['openChatBoxes'] = array();	
-		}
-
-		if( isset( $_GET['action'] ) ){
-			if ($_GET['action'] == "chatheartbeat") { 
-				$this->chatHeartbeat(); 
-			} 
-			if ($_GET['action'] == "sendchat") { 
-				$this->sendChat(); 
-			} 
-			if ($_GET['action'] == "closechat") { 
-				$this->closeChat(); 
-			} 
-			if ($_GET['action'] == "startchatsession") { 
-				$this->startChatSession(); 
-			} 
-			if ($_GET['action'] == "chathistory") { 
-				$this->chatHistory(); 
-			} 
-		}
-    }
+	
 	/*
 	------------
 	*/
@@ -69,6 +40,36 @@ class ci_chat{
 		}
 		return $items;
 	}
+	public function __construct()
+    {
+        $this->ci =& get_instance();
+        $this->ci->load->database();
+        //$this->ci->load->model('chat_model');
+        if (!isset($_SESSION['chatHistory'])) {
+			$_SESSION['chatHistory'] = array();	
+		}
+		if (!isset($_SESSION['openChatBoxes'])) {
+			$_SESSION['openChatBoxes'] = array();	
+		}
+
+		if( isset( $_GET['action'] ) ){
+			if ($_GET['action'] == "chatheartbeat") { 
+				$this->chatHeartbeat(); 
+			} 
+			if ($_GET['action'] == "sendchat") { 
+				$this->sendChat(); 
+			} 
+			if ($_GET['action'] == "closechat") { 
+				$this->closeChat(); 
+			} 
+			if ($_GET['action'] == "startchatsession") { 
+				$this->startChatSession(); 
+			} 
+			if ($_GET['action'] == "chathistory") { 
+				$this->chatHistory(); 
+			} 
+		}
+    }
 	/*
 	------------
 	*/
